@@ -8,4 +8,4 @@ gcc -fsanitize=address Main/printf.c -o original
 rm -f ./Main/ft_printf.c-e
 gcc -fsanitize=address Dont_touch/main.c Dont_touch/gnl.a -o test -Wall -Werror -Wextra -lm
 ./test
-rm -f ft_printf original ft_printf.txt printf.txt test
+rm -f ft_printf original ft_printf.txt printf.txt test Main/ft_printf.c

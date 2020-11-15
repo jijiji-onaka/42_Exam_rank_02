@@ -17,8 +17,8 @@ int main()
 	char	*line1;
 	char	*line2;
 	char	*argument;
-	char	*your_value;
-	char	*real_value;
+	char	*your_output;
+	char	*real_output;
 	int		count = 0;
 	int		clear_flag = 0;
 
@@ -31,43 +31,49 @@ int main()
 		}
 		else if (count % 3 == 1)
 		{
-			real_value = strdup(line1);
-			your_value = strdup(line2);
+			real_output = strdup(line1);
+			your_output = strdup(line2);
 		}
 		else if (count % 3 == 2)
 		{
 			int	flag = 0;
-			if (strcmp(your_value, real_value) != 0)
+			if (strcmp(your_output, real_output) != 0)
 				flag += 1;
 			if (strcmp(line1, line2) != 0)
 				flag += 2;
 			if (flag > 0)
 			{
+				printf(YELLOW);
+				printf("--------------------------------------------------------------------------------------------------------------------------\n");
+				printf(RESET);
 				printf(MAGENT);
 				printf("%s\n", argument);
 				printf(RESET);
 				if (flag == 1)
 				{
-					printf("your_value : [%s]\n", your_value);
-					printf("real_value : [%s]\n", real_value);
+					printf("your_output : [%s]\n", your_output);
+					printf("real_output : [%s]\n", real_output);
 				}
 				else if (flag == 2)
 				{
-					printf("your_return : [%s]\n", line2);
-					printf("real_return : [%s]\n", line1);
+					printf("your_return_value : %s\n", line2);
+					printf("real_return_value : %s\n", line1);
 				}
 				else
 				{
-					printf("your_value : [%s]\n", your_value);
-					printf("your_return : [%s]\n", line2);
-					printf("real_value : [%s]\n", real_value);
-					printf("real_return : [%s]\n", line1);
+					printf("your_output : [%s]\n", your_output);
+					printf("your_return_value : %s\n", line2);
+					printf("real_output : [%s]\n", real_output);
+					printf("real_return_value : %s\n", line1);
 				}
+				printf(YELLOW);
+				printf("--------------------------------------------------------------------------------------------------------------------------\n");
+				printf(RESET);
 				clear_flag = 1;
 			}
 			free(argument);
-			free(your_value);
-			free(real_value);
+			free(your_output);
+			free(real_output);
 		}
 		free(line1);
 		free(line2);
@@ -75,17 +81,19 @@ int main()
 	}
 	if (count % 3 == 0)
 		free(line1);
+	puts("");
 	if (clear_flag == 0)
 	{
 		printf(GREEN);
 		printf("完璧！ちゃんと書けてえらい！！！！\n");
-		printf("Examでもこの調子だよん！！");
+		printf("Examでもこの調子だよん！！\n");
 		printf(RESET);
 	}
 	else
 	{
 		printf(RED);
-		printf("復習してExam頑張ろう！！");
+		printf("復習してExam頑張ろう！！\n");
 		printf(RESET);
 	}
+	puts("");
 }
