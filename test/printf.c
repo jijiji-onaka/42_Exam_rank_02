@@ -300,4 +300,43 @@ int			main(void)
 	rc = printf("%4.4s %4.4s %4.4s %4.4s %4.4s", "", "hoge", "122345678910", "42tokyo-tjinichi", NULL);
 	printf("\n%d\n", rc);
 
+	printf("argument[printf(\"%%10.5d\", -123)]\n");
+	rc = printf("%10.5d", -123);
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%10.5d\", -123456)]\n");
+	rc = printf("%10.5d", -123456);
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%5.10d\", -123)]\n");
+	rc = printf("%5.10d", -123);
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%5.10d\", -123456)]\n");
+	rc = printf("%5.10d", -123456);
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%10.5x\", -123)]\n");
+	rc = printf("%10.5x", -123);
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%10.5x\", -123456)]\n");
+	rc = printf("%10.5x", -123456);
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%5.10x\", -123)]\n");
+	rc = printf("%5.10x", -123);
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%5.10x\", -123456)]\n");
+	rc = printf("%5.10x", -123456);
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%2.2d\", -123)]\n");
+	rc = printf("%2.2d", -123);
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%2.2x\", -123)]\n");
+	rc = printf("%2.2x", -123);
+	printf("\n%d\n", rc);
 }
