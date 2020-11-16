@@ -9,9 +9,11 @@ int main()
 {
 	int		fd1; // printf
 	int		fd2; // ft_printf
+	const char *user_name;
 
 	fd1 = open("printf.txt", O_RDONLY);
 	fd2 = open("ft_printf.txt", O_RDONLY);
+	user_name = getenv("USER");
 
 	int		rc;
 	char	*line1;
@@ -85,7 +87,8 @@ int main()
 	if (clear_flag == 0)
 	{
 		printf(GREEN);
-		printf("完璧！ちゃんと書けてえらい！！！！\n");
+		printf("%sさん！", user_name);
+		printf("ちゃんと書けてえらい！完璧！！！！\n");
 		printf("Examでもこの調子だよん！！\n");
 		printf(RESET);
 	}
