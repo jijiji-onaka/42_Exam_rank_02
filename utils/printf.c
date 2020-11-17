@@ -191,8 +191,8 @@ int			main(void)
 	rc = printf("%10s %10s %10s %10s %10s", "", "hoge", "122345678910", "42tokyo-tjinichi", NULL);
 	printf("\n%d\n", rc);
 
-	printf("argument[printf(\"%%.0s %%.0s %%.0s %%.0s %%.0s\", \"\", \"hoge\", \"12345678910\", \"42tokyo-tjinichi\", NULL)]\n");
-	rc = printf("%.0s %.0s %.0s %.0s %.0s", "", "hoge", "122345678910", "42tokyo-tjinichi", NULL);
+	printf("argument[printf(\"-%%.0s %%.0s %%.0s %%.0s %%.0s\", \"\", \"hoge\", \"12345678910\", \"42tokyo-tjinichi\", NULL)]\n");
+	rc = printf("-%.0s %.0s %.0s %.0s %.0s", "", "hoge", "122345678910", "42tokyo-tjinichi", NULL);
 	printf("\n%d\n", rc);
 
 	printf("argument[printf(\"%%.4s %%.4s %%.4s %%.4s %%.4s\", \"\", \"hoge\", \"12345678910\", \"42tokyo-tjinichi\", NULL)]\n");
