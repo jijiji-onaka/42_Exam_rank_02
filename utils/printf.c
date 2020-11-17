@@ -361,4 +361,16 @@ int			main(void)
 	printf("argument[printf(\"%%2.s\", \"tokyo\")]\n");
 	rc = printf("%2.s", "tokyo");
 	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%10.2s\", \"toto\")]\n");
+	rc = printf("%10.2s", "toto");
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"Magic %%s is %%5d\", \"number\", 42)]\n");
+	rc = printf("Magic %s is %5d", "number", 42);
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"Hexadecimal for %%d is %%x\", 42, 42)]\n");
+	rc = printf("Hexadecimal for %d is %x", 42, 42);
+	printf("\n%d\n", rc);
 }
