@@ -13,11 +13,11 @@ void	argument_s(char *str)
 }
 void	argument_d(char *str)
 {
-	printf("argument[printf(\"%%d\",\"%s\")]\n", str);
+	printf("argument[printf(\"%%d\",%s)]\n", str);
 }
 void	argument_x(char *str)
 {
-	printf("argument[printf(\"%%x\",\"%s\")]\n", str);
+	printf("argument[printf(\"%%x\",%s)]\n", str);
 }
 
 # define ARG(x) argument(x)
@@ -338,5 +338,25 @@ int			main(void)
 
 	printf("argument[printf(\"%%2.2x\", -123)]\n");
 	rc = printf("%2.2x", -123);
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%4s\", \"12345\")]\n");
+	rc = printf("%4s", "12345");
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%5s\", \"12345\")]\n");
+	rc = printf("%5s", "12345");
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%6s\", \"12345\")]\n");
+	rc = printf("%6s", "12345");
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%10.5d\", -42)]\n");
+	rc = printf("%10.5d", -42);
+	printf("\n%d\n", rc);
+
+	printf("argument[printf(\"%%2.s\", \"tokyo\")]\n");
+	rc = printf("%2.s", "tokyo");
 	printf("\n%d\n", rc);
 }
